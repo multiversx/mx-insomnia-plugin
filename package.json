@@ -1,28 +1,26 @@
 {
-  "name": "insomnia-plugin-elrond-native-auth",
+  "name": "insomnia-plugin-multiversx",
   "version": "0.5.0",
-  "description": "Native authentication - Insomnia plugin",
-  "author": "Gabriel Matei <gabrielvmatei@gmail.com>",
+  "description": "MultiversX - Insomnia plugin",
+  "author": "MultiverX Team <contact@multiversx.com>",
   "license": "ISC",
   "main": "plugin.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gabrielmatei/insomnia-plugin-elrond-native-auth.git"
+    "url": "git+https://github.com/multiversx/mx-insomnia-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/gabrielmatei/insomnia-plugin-elrond-native-auth/issues"
+    "url": "https://github.com/multiversx/mx-insomnia-plugin/issues"
   },
-  "homepage": "https://github.com/gabrielmatei/insomnia-plugin-elrond-native-auth#readme",
+  "homepage": "https://github.com/multiversx/mx-insomnia-plugin#readme",
   "keywords": [
-    "elrond",
-    "native",
-    "auth",
+    "multiversX",
     "insomnia"
   ],
   "insomnia": {
-    "name": "elrond-native-auth",
-    "displayName": "Elrond Native-Auth",
-    "description": "Native authentication - Insomnia plugin",
+    "name": "multiversx",
+    "displayName": "MultiversX plugin",
+    "description": "MultiversX - Insomnia plugin",
     "applications": {
       "core": "*"
     }

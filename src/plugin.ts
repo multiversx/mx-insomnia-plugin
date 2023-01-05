@@ -3,9 +3,9 @@ import { loginWalletWithMaiarId } from './maiar.id.login';
 import { loginWalletWithContext } from './native-auth.login';
 // import { signAndSendTransactions } from './sing-and-send-transactions.hook';
 
-const ELROND_API_DEVNET = 'https://devnet-api.elrond.com';
-const ELROND_API_TESTNET = 'https://testnet-api.elrond.com';
-const ELROND_API_MAINNET = 'https://api.elrond.com';
+const MX_API_DEVNET = 'https://devnet-api.elrond.com';
+const MX_API_TESTNET = 'https://testnet-api.elrond.com';
+const MX_API_MAINNET = 'https://api.elrond.com';
 
 const MAIAR_ID_API_DEVNET = 'https://devnet-id.maiar.com/api/v1';
 const MAIAR_ID_API_TESTNET = 'https://testnet-id.maiar.com/api/v1';
@@ -32,23 +32,23 @@ export const templateTags = [
         description: 'The server-side component will validate the `origin` header, which must match with the provided host in the client-side configuration'
       },
       {
-        displayName: 'Elrond Api URL',
+        displayName: 'Multiver Api URL',
         type: 'enum',
         validate: (arg: string) => arg ? '' : 'Required',
-        defaultValue: ELROND_API_MAINNET,
+        defaultValue: MX_API_MAINNET,
         description: 'The endpoint from where the current block information will be fetched upon initialization.',
         options: [
           {
             displayName: 'Devnet',
-            value: ELROND_API_DEVNET,
+            value: MX_API_DEVNET,
           },
           {
             displayName: 'Testnet',
-            value: ELROND_API_TESTNET,
+            value: MX_API_TESTNET,
           },
           {
             displayName: 'Mainnet',
-            value: ELROND_API_MAINNET,
+            value: MX_API_MAINNET,
           },
         ]
       },
