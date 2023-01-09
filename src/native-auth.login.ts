@@ -5,6 +5,7 @@ export const loginWalletWithContext = async (
   context: any,
   host: string,
   apiUrl: string,
+  gatewayUrl: string,
   shard: string,
   expirySeconds: number,
   privateKey: string,
@@ -14,8 +15,12 @@ export const loginWalletWithContext = async (
     blockHashShard = parseInt(shard);
   }
 
-  const args = [host, apiUrl, expirySeconds, privateKey, blockHashShard];
+  const args = [host, apiUrl, expirySeconds, privateKey, blockHashShard, gatewayUrl];
   console.log(args);
+
+  if (gatewayUrl === '-') {
+    gatewayUrl = undefined;
+  }
 
   const cacheKey = Buffer.from(args.join(':')).toString('base64');
 
@@ -32,6 +37,7 @@ export const loginWalletWithContext = async (
 
   const nativeAuthSigner = new NativeAuthSigner({
     host,
+    gatewayUrl,
     apiUrl,
     expirySeconds,
     privateKey,
