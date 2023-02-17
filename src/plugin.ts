@@ -62,28 +62,28 @@ export const templateTags = [
       },
       {
         displayName: 'MultiversX Gateway URL',
-        type: 'enum',
+        type: 'string',
         defaultValue: MX_GATEWAY_MAINNET,
         validate: (arg: string) => arg ? '' : 'Required',
         description: 'The endpoint from where the current block information will be fetched upon initialization.',
-        options: [
-          {
-            displayName: '-',
-            value: '-',
-          },
-          {
-            displayName: 'Devnet',
-            value: MX_GATEWAY_DEVNET,
-          },
-          {
-            displayName: 'Testnet',
-            value: MX_GATEWAY_TESTNET,
-          },
-          {
-            displayName: 'Mainnet',
-            value: MX_GATEWAY_MAINNET,
-          },
-        ]
+        // options: [
+        //   {
+        //     displayName: '-',
+        //     value: '-',
+        //   },
+        //   {
+        //     displayName: 'Devnet',
+        //     value: MX_GATEWAY_DEVNET,
+        //   },
+        //   {
+        //     displayName: 'Testnet',
+        //     value: MX_GATEWAY_TESTNET,
+        //   },
+        //   {
+        //     displayName: 'Mainnet',
+        //     value: MX_GATEWAY_MAINNET,
+        //   },
+        // ]
       },
       {
         displayName: 'Blockchain shard',
